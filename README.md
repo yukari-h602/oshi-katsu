@@ -48,3 +48,6 @@
 ### その他の機能
 - フォロー、いいねやコメントをされた際に通知される
 - ゲストログイン機能
+
+## 画面遷移図
+https://www.figma.com/file/6JuAeEfJFk4Hpqe5YAvEYe/oshi-katsu?type=design&node-id=0%3A1&mode=design&t=1TEhjgD5X2sjWrvy-1
