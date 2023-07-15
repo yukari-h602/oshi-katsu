@@ -43,7 +43,7 @@
   - Stimulus Autocompleteを使用し、候補を表示し、検索しやすくする
 
 - DM・チャット機能
-- ユーザーはDMを送れ、個人間でチャットでコミュニケーションをとれる
+  - ユーザーはDMを送れ、個人間でチャットでコミュニケーションをとれる
 
 ### その他の機能
 - フォロー、いいねやコメントをされた際に通知される
@@ -51,3 +51,6 @@
 
 ## 画面遷移図
 https://www.figma.com/file/6JuAeEfJFk4Hpqe5YAvEYe/oshi-katsu?type=design&node-id=0%3A1&mode=design&t=1TEhjgD5X2sjWrvy-1
+
+## ER図
+https://drive.google.com/file/d/1-PM4fakPsx3eFfKnhkabEFfu6YUt3o9b/view?usp=sharing
