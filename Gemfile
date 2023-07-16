@@ -41,6 +41,10 @@ gem 'ransack'
 # bootstrap for styling
 gem 'bootstrap_form'
 
+gem 'bootstrap'
+gem 'font-awesome-sass', '~> 5.12.0'
+gem 'jquery-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
