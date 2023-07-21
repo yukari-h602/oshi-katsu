@@ -1,25 +1,22 @@
 <header>
-  <nav class='navbar navbar-expand-lg navigation navbar-light bg-light'>
+  <nav class='navbar navbar-expand-lg navigation navbar-light bg-info'>
     <%= link_to root_path, class: 'navbar-brand' do %>
       <%= image_tag 'logo.png' %>
     <% end %>
-    <button class='navbar-toggler' data-toggle='collapse' data-target='#navbarSupportedContent'
-      aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-      <span class='navbar-toggler-icon'></span>
-    </button>
-
-    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-      <ul class='navbar-nav ml-auto main-nav align-items-center'>
-        <li class='nav-item'>
-          <a href="#" class="nav-link">ゆーざーねーむ</a>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'プロフィール', "#", class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link' %>
-        </li>
-      </ul>
+    <div class='container-fluid'>
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link mt-2 rounded btn btn-info text-secondary" href="#">推しを布教する</a>
+          <a class="nav-link mt-2 rounded btn btn-info text-secondary" href="#">マイページ</a>
+          <a class="nav-link">
+            <%= button_to 'ログアウト', logout_path, method: :delete, class: 'text-secondary rounded btn btn-info' %>
+          </a>
+        </div>
+      </div>
     </div>
   </nav>
 </header>
