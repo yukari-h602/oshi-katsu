@@ -12,12 +12,24 @@
     width: 100%;
     text-align: center;
     font-size: 3rem;
-    color: white;
+
+    h1 {
+      color: white;
+    }
 
     @media screen and (max-width: 767px) {
       font-size: 2.0rem;
     }
   }
+}
+
+.wrapper {
+  background-image: image-url("top_image.png");
+  background-size: cover
+}
+
+h1,h2 {
+  color: #1E88A8;
 }
 
 p {
