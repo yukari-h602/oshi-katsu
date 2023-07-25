@@ -1,18 +1,54 @@
 <div class='top-wrapper'>
   <div class='top-inner-text'>
-    <h1>推しのカルテ</h1>
+    <h1>推しのカルテ</h1><br>
+    <h2>心を豊かにしてくれる「推し」</h2>
+    <h2>そんなあなたの推しを布教しませんか？</h2>
   </div>
 </div>
 <div class='top'>
   <div class='container pt-3'>
     <div class='row'>
-      <p class="col-12 col-md-offset-1 text-center fs-2">推しのカルテとは</p>
+      <p class="col-12 col-md-offset-1 text-center fs-2 pt-5">推しのカルテとは</p>
       <p class="text-center">
         推しのカルテは、推しを持つ全ての皆様の<br>
         「推しを布教したい！」「同志を発見して繋がりたい！」<br>
         「グッズ情報を共有したい！」そんな気持ちを<br>
         可視化するサービスです
       </p>
+      <p class="col-12 col-md-offset-1 text-center fs-2 pt-5">推しのカルテの機能</p>
+      <div class="col-sm-6 pt-3">
+        <div class="card">
+          <h3 class="card-header text-secondary">
+            <%= icon 'far', 'handshake' %>推しの布教
+          </h3>
+          <div class="card-body">
+            <h4 class="card-title">テンプレートを使用して推しを布教！</h4>
+            <p class="card-text">SNSでシェアし、推しを布教できます</p>
+            <p class="card-text">まずは一覧画面でみんなの推しをチェック！</p>
+            <p class="card-text">新たな推しや同志を発見できるかもしれませんよ？<p>
+            <p class="card-text">「私も布教したい！」と思ったあなたユーザー登録してみませんか？<p>
+            <a href="#!" class="btn btn-primary">みんなの推しを見てみる</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 pt-3">
+        <div class="card">
+          <h3 class="card-header text-secondary">
+            <%= icon 'fab', 'twitter-square' %>グッズ情報の共有＆同志と繋がる
+          </h3>
+          <div class="card-body">
+            <h4 class="card-title">Twitterを埋め込んでグッズ情報を共有しましょう</h4>
+            <p class="card-text">Twitterで推しのグッズ情報を発見しても他のツイートにまぎれて探すのが大変になったりしませんか？</p>
+            <p class="card-text">同志達にグッズ情報をシェアすると同時にグッズ情報を一覧で確認できます</p>
+            <p class="card-text">また、チャット機能も搭載しているので、気になる同志とチャットで推しについて語ることもできますよ？
+            <p class="card-text">この機能は登録ユーザーのみとなっております。あなたも登録してすべての機能を使ってみませんか？
+          </div>
+        </div>
+      </div>
+      <h4 class="text-center mt-5">あなたに素敵な推し活を！</h4>
+      <div class="mt-3 mb-5 text-center">
+        <%= button_to '推しを布教してみる', login_path, class: 'btn btn-success btn-lg text-white' %>
+      </div>
     </div>
   </div>
 </div>

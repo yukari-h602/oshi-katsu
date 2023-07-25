@@ -7,6 +7,9 @@ $danger:        #FF9292;
 $light:         #F6F6F6;
 $dark:          #835858;
 
+$enable-rounded:              true;
+$border-radius-pill:          50rem;
+
 * { font-family: "M PLUS Rounded 1c"; }
 
 @import 'top';
