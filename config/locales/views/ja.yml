@@ -18,3 +18,10 @@ ja:
       success: 'ログインしました'
       fail: 'ログインに失敗しました'
     destroy: 'ログアウトしました'
+  boards:
+    index:
+      title: 'みんなの推し'
+      no_result: 'まだ布教されてないよ'
+    new:
+      title: 'あなたの推しについて教えてね'
+

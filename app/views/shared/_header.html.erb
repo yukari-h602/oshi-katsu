@@ -10,7 +10,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-link mt-2 text-secondary" href="#">推しを布教する</a>
+          <%= link_to t('boards.index.title'), boards_path, class: "nav-link mt-2 text-secondary" %>
           <a class="nav-link mt-2 text-secondary" href="#">マイページ</a>
           <a class="nav-link">
             <%= button_to 'ログアウト', logout_path, method: :delete, class: 'text-secondary rounded btn btn-link' %>

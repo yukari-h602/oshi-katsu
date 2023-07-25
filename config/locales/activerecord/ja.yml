@@ -2,9 +2,16 @@ ja:
   activerecord:
     models:
       user: 'ユーザー'
+      board: '推しのカルテ'
     attributes:
       user:
         email: 'メールアドレス'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: 'ニックネーム'
+      board:
+        name: '推しの名前'
+        title: '作品名'
+        world: '作品の世界観'
+        charm: '推しの特徴や魅力'
+        body: '推しへの愛'
