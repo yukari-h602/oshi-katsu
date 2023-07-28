@@ -3,6 +3,9 @@ ja:
     login: 'ログイン'
     register: '登録する'
     logout: 'ログアウト'
+    message:
+      require_login: 'ログインしてね'
+      created: '布教しました'
   users:
     new:
       title: 'ユーザー登録'
@@ -17,7 +20,8 @@ ja:
     create:
       success: 'ログインしました'
       fail: 'ログインに失敗しました'
-    destroy: 'ログアウトしました'
+    destroy:
+      success: 'ログアウトしました'
   boards:
     index:
       title: 'みんなの推し'

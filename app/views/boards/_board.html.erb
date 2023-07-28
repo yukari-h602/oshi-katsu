@@ -1,30 +1,36 @@
-<div class="wrapper">
-  <div class="col-sm-12 col-lg-4 mb-3">
-    <div id="board-id-<%= board.id %>">
-      <div class="card">
-        <%= image_tag 'board_placeholder.png', class: 'card-img-top', size: '300x200' %>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">
-              <%= board.title %>
-            </a>
-          </h4>
-          <div class='mr10 float-right'>
-            <a href="#"><%= icon 'fas', 'trash', class: 'pr-1' %></a>
-            <a href="#"><%= icon 'fa', 'pen' %></a>
-          </div>
-          <ul class="list-inline">
-            <li class="list-inline-item">
-              <%= icon 'far', 'user' %>
-              <%= board.user.decorate.full_name %>
-            </li>
-            <li class="list-inline-item">
-              <%= icon 'far', 'calendar' %>
-              <%= l board.created_at, format: :long %>
-            </li>
-          </ul>
-          <p class="card-text"><%= board.body %></p>
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="board-id-<%= board.id %>">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title text-center">
+          <%= link_to '推しのカルテ', '#', class: 'text-danger' %>
+        </h4>
+        <div class= "card-text mx-3 text-secondary">
+          <div class="box-title"><%= Board.human_attribute_name(:name) %></div>
+          <div class="box-text"><%= board.name %></div>
+          <div class="box-title"><%= Board.human_attribute_name(:title) %></div>
+          <div class="box-text"><%= board.title %></div>
+          <div class="box-title"><%= Board.human_attribute_name(:world) %></div>
+          <div class="box-text"><%= board.world %></div>
+          <div class="box-title"><%= Board.human_attribute_name(:charm) %></div>
+          <div class="box-text"><%= board.charm %></div>
+          <div class="box-title"><%= Board.human_attribute_name(:body) %></div>
+          <div class="box-text"><%= board.body %></div>
         </div>
+        <div class='mr10 float-right mt-3'>
+          <a href="#"><%= icon 'fas', 'trash', class: 'pr-1' %></a>
+          <a href="#"><%= icon 'fa', 'pen' %></a>
+        </div>
+        <ul class="list-inline mt-3 text-secondary">
+          <li class="list-inline-item">
+            <%= icon 'far', 'user' %>
+            <%= board.user.name %>
+          </li>
+          <li class="list-inline-item">
+            <%= icon 'far', 'calendar' %>
+            <%= l board.created_at, format: :long %>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
