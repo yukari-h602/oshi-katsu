@@ -3,6 +3,7 @@ ja:
     models:
       user: 'ユーザー'
       board: '推しのカルテ'
+      comment: 'コメント'
     attributes:
       user:
         email: 'メールアドレス'
@@ -15,3 +16,5 @@ ja:
         world: '作品の世界観'
         charm: '推しの特徴や魅力'
         body: '推しへの愛'
+      comment:
+        body: 'コメント'

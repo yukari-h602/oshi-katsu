@@ -3,10 +3,11 @@ ja:
     login: 'ログイン'
     register: '登録する'
     logout: 'ログアウト'
+    post: 'コメントする'
     message:
       require_login: 'ログインしてね'
-      created: '布教しました'
-      not_created: '布教できませんでした'
+      created: "%{item}を作成しました"
+      not_created: "%{item}を作成できませんでした"
   users:
     new:
       title: 'ユーザー登録'
@@ -29,4 +30,6 @@ ja:
       no_result: 'まだ布教されてないよ'
     new:
       title: 'あなたの推しについて教えてね'
+    show:
+      title: '推しの詳細'
 

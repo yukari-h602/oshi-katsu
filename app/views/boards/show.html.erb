@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <div class="container py-5">
+    <div class="row mb-3">
+      <div class="col-lg-8 offset-lg-2">
+        <h1><%= t('.title') %></h1>
+        <!-- 推しのカルテ内容 -->
+        <article class="card">
+          <div class="card-body">
+            <h3 class="text-center"><%= Board.model_name.human %></h3>
+            <%= render 'crud_menus', board: @board %>
+            <div class= "card-text mx-3 text-secondary">
+              <div class="box-title"><%= Board.human_attribute_name(:name) %></div>
+              <div class="box-text"><%= @board.name %></div>
+              <div class="box-title"><%= Board.human_attribute_name(:title) %></div>
+              <div class="box-text"><%= @board.title %></div>
+              <div class="box-title"><%= Board.human_attribute_name(:world) %></div>
+              <div class="box-text"><%= simple_format(@board.world, {}, wrapper_tag: "div") %></div>
+              <div class="box-title"><%= Board.human_attribute_name(:charm) %></div>
+              <div class="box-text"><%= simple_format(@board.charm, {}, wrapper_tag: "div") %></div>
+              <div class="box-title"><%= Board.human_attribute_name(:body) %></div>
+              <div class="box-text"><%= simple_format(@board.body, {}, wrapper_tag: "div") %></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- コメントフォーム -->
+    <%= render 'comments/form', { board: @board, comment: @comment } %>
+
+    <!-- コメントエリア -->
+    <%= render 'comments/comments', { comments: @comments } %>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 class Board < ApplicationRecord
   belongs_to :user
+  has_many :comments, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 255 }
   validates :title, presence: true, length: { maximum: 255 }
