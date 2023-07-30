@@ -6,6 +6,7 @@ ja:
     message:
       require_login: 'ログインしてね'
       created: '布教しました'
+      not_created: '布教できませんでした'
   users:
     new:
       title: 'ユーザー登録'
