@@ -11,11 +11,11 @@
           <div class="box-title"><%= Board.human_attribute_name(:title) %></div>
           <div class="box-text"><%= board.title %></div>
           <div class="box-title"><%= Board.human_attribute_name(:world) %></div>
-          <div class="box-text"><%= board.world %></div>
+          <div class="box-text"><%= simple_format(board.world, {}, wrapper_tag: "div") %></div>
           <div class="box-title"><%= Board.human_attribute_name(:charm) %></div>
-          <div class="box-text"><%= board.charm %></div>
+          <div class="box-text"><%= simple_format(board.charm, {}, wrapper_tag: "div") %></div>
           <div class="box-title"><%= Board.human_attribute_name(:body) %></div>
-          <div class="box-text"><%= board.body %></div>
+          <div class="box-text"><%= simple_format(board.body, {}, wrapper_tag: "div") %></div>
         </div>
         <%= render 'crud_menus', board: board %>
         <ul class="list-inline mt-3 text-secondary">
