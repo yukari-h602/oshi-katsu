@@ -7,7 +7,7 @@
         <article class="card">
           <div class="card-body">
             <h3 class="text-center"><%= Board.model_name.human %></h3>
-            <%= render 'crud_menus', board: @board %>
+            <%= render 'crud_menus', board: @board if current_user.own?(@board) %>
             <div class= "card-text mx-3 text-secondary">
               <div class="box-title"><%= Board.human_attribute_name(:name) %></div>
               <div class="box-text"><%= @board.name %></div>
