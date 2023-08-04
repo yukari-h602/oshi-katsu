@@ -9,12 +9,23 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <%= link_to t('boards.index.title'), boards_path, class: "nav-link mt-2 text-secondary" %>
-          <a class="nav-link mt-2 text-secondary" href="#">マイページ</a>
-          <a class="nav-link">
-            <%= button_to 'ログアウト', logout_path, method: :delete, class: 'text-secondary rounded btn btn-link' %>
-          </a>
+        <div class="navbar-nav ml-auto px-4">
+          <li class="nav-item px-3">
+            <%= link_to t('boards.index.title'), boards_path, class: "nav-link mt-2 text-secondary" %>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mt-2 text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user-circle"></i>マイページ
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link px-3 mt-2 text-secondary" href="#">プロフィール</a></li>
+              <li>
+                <a class="nav-link">
+                <%= button_to 'ログアウト', logout_path, method: :delete, class: 'text-secondary rounded btn btn-link' %>
+                </a>
+              </li>
+            </ul>
+          </li>
         </div>
       </div>
     </div>

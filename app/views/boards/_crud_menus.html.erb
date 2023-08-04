@@ -5,7 +5,7 @@
     <% end %>
   </li>
   <li class="list-inline-item">
-    <%= link_to board_path(board), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } do %>
+    <%= link_to board_path(board), data: { turbo_method: :delete, turbo_confirm: t('defaults.message.delete_confirm') } do %>
       <i class="fas fa-trash" style="color:#FFE2E2;"></i>
     <% end %>
   </li>

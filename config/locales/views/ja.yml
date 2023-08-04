@@ -11,7 +11,7 @@ ja:
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新できませんでした"
       deleted: "%{item}を削除しました"
-      delete_confirm: '削除しますか？'
+      delete_confirm: '本当に削除しますか？'
   users:
     new:
       title: 'ユーザー登録'
@@ -33,7 +33,7 @@ ja:
       title: 'みんなの推し'
       no_result: 'まだ布教されてないよ'
     new:
-      title: 'あなたの推しについて教えてね'
+      title: 'あなたの推しについて教えて'
     show:
       title: '推しの詳細'
     edit:
