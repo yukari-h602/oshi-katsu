@@ -17,7 +17,14 @@
           <div class="box-title"><%= Board.human_attribute_name(:body) %></div>
           <div class="box-text"><%= simple_format(board.body, {}, wrapper_tag: "div") %></div>
         </div>
-        <%= render 'crud_menus', board: board if current_user.own?(board) %>
+				<%= link_to "https://twitter.com/share?url=#{request.url}/&text=私の推しは#{board.name}!みんなも布教しよう!/&hashtags=推しのカルテ", class: 'btn btn-outline-info m-3', title: 'Twitter', target: '_blank' do %>
+          <i class="fab fa-twitter" style="color:#3A8FB7"></i>
+        <% end %>
+        <% if current_user.own?(board) %>
+          <%= render 'crud_menus', board: board %>
+        <% else %>
+          <%= render 'bookmark_button', board: board %>
+        <% end %>
         <ul class="list-inline mt-3 text-secondary">
           <li class="list-inline-item">
             <%= icon 'far', 'user' %>

@@ -1,10 +1,10 @@
-<ul class='crud-menu-btn list-inline float-right'>
-  <li class="list-inline-item">
+<ul class='crud-menu-btn list-inline d-flex justify-content-end px-2'>
+  <li class="list-inline-item px-1">
     <%= link_to edit_board_path(board) do %>
       <%= icon 'fa', 'pen' %>
     <% end %>
   </li>
-  <li class="list-inline-item">
+  <li class="list-inline-item px-2">
     <%= link_to board_path(board), data: { turbo_method: :delete, turbo_confirm: t('defaults.message.delete_confirm') } do %>
       <i class="fas fa-trash" style="color:#FFE2E2;"></i>
     <% end %>
