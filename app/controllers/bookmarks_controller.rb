@@ -7,7 +7,7 @@ class BookmarksController < ApplicationController
 
   def destroy
     board = current_user.bookmarks.find(params[:id]).board
-    current_user.unbook(board)
+    current_user.unbookmark(board)
     redirect_to request.referer || root_path, success: t('.success')
   end
 end

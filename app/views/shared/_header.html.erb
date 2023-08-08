@@ -3,31 +3,28 @@
     <%= link_to root_path, class: 'navbar-brand' do %>
       <%= image_tag 'logo.png' %>
     <% end %>
-    <div class='container-fluid'>
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto px-4">
-          <li class="nav-item px-3">
-            <%= link_to t('boards.index.title'), boards_path, class: "nav-link mt-2 text-secondary" %>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle mt-2 text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-user-circle"></i>マイページ
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="nav-link px-3 mt-2 text-secondary" href="#">プロフィール</a></li>
-              <li>
-                <a class="nav-link">
-                <%= button_to 'ログアウト', logout_path, method: :delete, class: 'text-secondary rounded btn btn-link' %>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </div>
-      </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+      <ul class="navbar-nav ml-auto main-nav align-items-center px-5">
+        <li class="nav-item px-2">
+          <%= link_to t('boards.index.title'), boards_path, class: "nav-link mt-2 text-secondary" %>
+        </li>
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link dropdown-toggle mt-2 text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user-circle"></i>マイページ
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="nav-link px-3 mt-2 text-secondary" href="#">プロフィール</a>
+              <%= link_to t('boards.bookmarks.title'), bookmarks_boards_path, class: 'text-secondary px-3 nav-link' %>
+              <%= button_to 'ログアウト', logout_path, method: :delete, class: 'text-secondary btn btn-link' %>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </nav>
 </header>

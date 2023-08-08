@@ -38,4 +38,12 @@ ja:
       title: '推しの詳細'
     edit:
       title: '推しの編集'
+    bookmarks:
+      title: 'いいね一覧'
+      no_result: 'まだ「いいね」してないよ'
+  bookmarks:
+    create:
+      success: 'いいねしました'
+    destroy:
+      success: 'いいねを外しました'
 
