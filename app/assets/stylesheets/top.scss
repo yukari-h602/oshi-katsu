@@ -40,6 +40,10 @@ p {
   background-color: #FEDFE1;
 }
 
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
 .box-title {
   margin:0em ;
   display:inline-block;

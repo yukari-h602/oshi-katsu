@@ -18,9 +18,9 @@
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a class="nav-link px-3 mt-2 text-secondary" href="#">プロフィール</a>
-              <%= link_to t('boards.bookmarks.title'), bookmarks_boards_path, class: 'text-secondary px-3 nav-link' %>
-              <%= button_to 'ログアウト', logout_path, method: :delete, class: 'text-secondary btn btn-link' %>
+              <a class="dropdown-item px-3 mt-2 text-secondary" href="#">プロフィール</a>
+              <%= link_to t('boards.bookmarks.title'), bookmarks_boards_path, class: 'text-secondary px-3 dropdown-item' %>
+              <%= button_to 'ログアウト', logout_path, method: :delete, class: 'dropdown-item text-secondary btn btn-link' %>
             </li>
           </ul>
         </li>
