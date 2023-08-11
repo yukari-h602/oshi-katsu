@@ -7,4 +7,12 @@ class Board < ApplicationRecord
   validates :world, presence: true, length: { maximum: 65_535 }
   validates :charm, presence: true, length: { maximum: 65_535 }
   validates :body, presence: true, length: { maximum: 65_535 }
+
+  def self.ransackable_attributes(auth_object = nil)
+    %w[name title world charm body]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    %w[comments user]
+  end
 end
