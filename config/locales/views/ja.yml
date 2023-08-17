@@ -5,6 +5,7 @@ ja:
     logout: 'ログアウト'
     post: 'コメントする'
     search_word: '検索するワードを入力してね'
+    edit: '編集する'
     message:
       require_login: 'ログインしてね'
       created: "%{item}を作成しました"
@@ -47,6 +48,11 @@ ja:
       success: 'いいねしました'
     destroy:
       success: 'いいねを外しました'
+  profiles:
+    show:
+      title: 'プロフィール'
+    edit:
+      title: 'プロフィール編集'
   views:
     pagination:
       first: "&laquo; 最初"

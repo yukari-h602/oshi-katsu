@@ -10,6 +10,8 @@ ja:
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: 'ニックネーム'
+        hobby: '自己紹介'
+        avatar: 'アバター'
       board:
         name: '推しの名前'
         title: '作品名'
