@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="container py-5">
     <div class="row mb-3">
-      <div class="col-lg-8 offset-lg-2">
+      <div class="col-md-8 offset-lg-1 pb-5 mb-lg-2 pt-md-5 mt-n3 mt-md-0">
         <h1><%= t('.title') %></h1>
         <!-- 推しのカルテ内容 -->
         <article class="card">
@@ -23,6 +23,23 @@
           </div>
         </article>
       </div>
+      <!-- UserInfo -->
+      <div class="col-lg-3 col-md-4 pb-5 mt-n5 py-5">
+        <div class="card text-center">
+          <div class="py-5 text-center">
+            <%= image_tag @board.user.avatar.url, class: 'rounded-circle', size: '50x50' %>
+          </div>
+          <h3 class="py-2">
+            <%= link_to @board.user.name, user_path(@board.user.id) %>
+          </h3>
+          <h5 class="text-secondary"><%= @board.user.hobby %></h5>
+          <% if current_user != @board.user %>
+            <div class="py-5">
+              <%= render partial: "relationships/follow_btn", locals: { user: current_user } %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
 
     <!-- コメントフォーム -->
@@ -30,5 +47,4 @@
 
     <!-- コメントエリア -->
     <%= render 'comments/comments', { comments: @comments } %>
-  </div>
 </div>

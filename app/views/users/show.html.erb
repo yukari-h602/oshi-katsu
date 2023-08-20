@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <div class="container p-5">
+    <div class="card">
+      <!-- Card header -->
+      <div class="card-header">
+        <h3 class="mb-0">プロフィール</h3>
+      </div>
+      <div class="card-body text-center my-5">
+        <div>
+          <h4 class="mb-0"><%= @user.name %>さんのプロフィール</h4>
+          <div class="row mx-5">
+            <table class="table">
+              <div class="mb-3">
+                <div class="py-3">
+                  <%= image_tag @user.avatar.url, class: 'rounded-circle', size: '50x50' %>
+                </div>
+                <tr>
+                  <th scope="row"><%= User.human_attribute_name(:name) %></th>
+                  <td><%= @user.name %></td>
+                </tr>
+                <tr>
+                  <th scope="row"><%= User.human_attribute_name(:hobby) %></th>
+                  <td><%= @user.hobby %></td>
+                </tr>
+              </div>               
+            </table>
+          </div>
+        </div>
+        <% if current_user != @user %>
+          <td><%= render partial: "relationships/follow_btn", locals: { user: current_user } %></td>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
