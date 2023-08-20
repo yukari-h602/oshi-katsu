@@ -49,7 +49,7 @@ gem 'jquery-rails'
 
 gem 'rails-i18n', '~> 7.0.0'
 
-gem 'carrierwave', '2.0.2'
+gem 'carrierwave', '~> 3.0'
 
 gem "mini_magick"
 

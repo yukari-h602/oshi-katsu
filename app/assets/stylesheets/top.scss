@@ -98,3 +98,15 @@ p {
 .pagination>li>a:hover {        
   border-radius: 15px;    /*角を丸くする*/
 }
+
+.sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  color: #113285;
+}
+
+.sidebar ul li a:hover {
+  color: #fff;
+  background: #7386D5;
+}

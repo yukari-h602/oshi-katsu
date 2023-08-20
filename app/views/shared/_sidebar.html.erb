@@ -1,0 +1,16 @@
+<aside class="sidebar col-lg-3 col-md-4 border-end pb-5 mt-n5" style="background:rgba(246,246,246,0.45)">
+  <div class="position-sticky top-0">
+    <div class="text-center pt-5">
+      <h3 class="position-relative mx-auto mt-2 mt-lg-4 py-3 mb-3">
+        <%= current_user.name %>
+      </h3>
+      <ul class="navbar-nav ml-auto main-nav align-items-center">
+        <li class="nav-item">
+          <%= link_to t('profiles.show.title'), profile_path %>
+          <%= link_to t('boards.bookmarks.title'), bookmarks_boards_path %>
+          <%= link_to 'ログアウト', logout_path, data: { turbo_method: :delete } %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>

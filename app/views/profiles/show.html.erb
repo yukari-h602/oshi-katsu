@@ -1,7 +1,8 @@
 <div class="wrapper">
   <div class="container pt-3">
     <div class="row">
-      <div class="col-md-10 offset-md-1">
+      <%= render 'shared/sidebar' %>
+      <div class="col-md-8 offset-lg-1 pb-5 mb-lg-2 pt-md-5 mt-n3 mt-md-0">
         <h1 class="float-left mb-5"><%= t('.title') %></h1>
         <%= link_to t('defaults.edit'), edit_profile_path, class: 'btn btn-warning' %>
         <table class="table">
