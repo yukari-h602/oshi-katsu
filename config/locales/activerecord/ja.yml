@@ -12,6 +12,8 @@ ja:
         name: 'ニックネーム'
         hobby: '自己紹介'
         avatar: 'アバター'
+        followings: 'フォロー中'
+        followers: 'フォロワー'
       board:
         name: '推しの名前'
         title: '作品名'

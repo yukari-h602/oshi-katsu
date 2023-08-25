@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <div class="container py-5"> 
+    <h2><%= User.human_attribute_name("followings") %></h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th><%= User.human_attribute_name("avatar") %></th>
+          <th><%= User.human_attribute_name("name") %></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td>
+              <%= link_to user_path(user) do %>
+                <%= image_tag user.avatar.url, class: 'rounded-circle', size: '50x50' %>
+              <% end %>
+            </td>
+            <td><%= user.name %></td>
+            <td>
+              <%= link_to followings_user_path(user) do %>
+                <h6 class="text-dark">フォロー<%= user.followings.count %></h6>
+              <% end %>
+            </td>
+            <td>  
+              <%= link_to followers_user_path(user) do %>
+                <h6 class="text-dark">フォロワー<%= user.followers.count %></h6>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

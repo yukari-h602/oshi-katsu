@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'relationships/followings'
-  get 'relationships/followers'
   root 'static_pages#top'
 
 	get 'terms_of_service', to: 'static_pages#terms_of_service'
@@ -11,9 +9,10 @@ Rails.application.routes.draw do
 	delete 'logout', to: 'user_sessions#destroy'
 	
 	resources :users, only: %i[new create show] do
+		member do
+			get :followings, :followers
+		end
 		resource :relationships, only: [:create, :destroy]
-		get 'followings' => 'relationships#followings', as: 'followings'
-		get 'followers' => 'relationships#followers', as: 'followers'
 	end
 
 	resources :boards do
