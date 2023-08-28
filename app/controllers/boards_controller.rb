@@ -3,7 +3,12 @@ class BoardsController < ApplicationController
   before_action :set_board, only: %i[edit update destroy]
 
 	def index
-    @q = Board.ransack(params[:q])
+    boards = if(tag_name = params[:tag_name])
+      Board.with_tag(tag_name)
+    else
+      Board.all
+    end
+    @q = boards.ransack(params[:q])
 		@boards = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page]).per(6)
 	end
 
@@ -14,6 +19,7 @@ class BoardsController < ApplicationController
   def create
     @board = current_user.boards.build(board_params)
     if @board.save
+      @board.save_tags(tag_names: params.dig(:board, :tag_names).try(:split, ","))
       redirect_to boards_path, success: t('defaults.message.created', item: Board.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_created', item: Board.model_name.human)
@@ -31,6 +37,7 @@ class BoardsController < ApplicationController
 
   def update
     if @board.update(board_params)
+      @board.save_tags(tag_names: params.dig(:board, :tag_names).try(:split, ","))
       redirect_to @board, success: t('defaults.message.updated', item: Board.model_name.human)
     else
       flash.now[:danger] = t('defaults.message.not_updated', item: Board.model_name.human)

@@ -16,6 +16,9 @@
           <div class="box-text"><%= simple_format(board.charm, {}, wrapper_tag: "div") %></div>
           <div class="box-title"><%= Board.human_attribute_name(:body) %></div>
           <div class="box-text"><%= simple_format(board.body, {}, wrapper_tag: "div") %></div>
+          <div class="pt-2">
+            <%= render board.tags %>
+          </div>
         </div>
 				<%= link_to "https://twitter.com/share?url=#{request.url}/&text=私の推しは#{board.name}!%0aみんなも布教しよう!%0a%0a/&hashtags=推しのカルテ", class: 'btn btn-outline-info m-3', title: 'Twitter', target: '_blank' do %>
           <i class="fab fa-twitter" style="color:#3A8FB7"></i>

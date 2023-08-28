@@ -19,6 +19,9 @@
               <div class="box-text"><%= simple_format(@board.charm, {}, wrapper_tag: "div") %></div>
               <div class="box-title"><%= Board.human_attribute_name(:body) %></div>
               <div class="box-text"><%= simple_format(@board.body, {}, wrapper_tag: "div") %></div>
+              <div class="pt-2">
+                <%= render @board.tags %>
+              </div>
             </div>
           </div>
         </article>

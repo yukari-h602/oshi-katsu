@@ -20,5 +20,6 @@ ja:
         world: '作品の世界観'
         charm: '推しの特徴や魅力'
         body: '推しへの愛'
+        tag_names: 'タグ'
       comment:
         body: 'コメント'
