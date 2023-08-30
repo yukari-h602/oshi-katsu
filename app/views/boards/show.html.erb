@@ -29,7 +29,7 @@
       <!-- UserInfo -->
       <div class="col-lg-3 col-md-4 pb-5 mt-n5 py-5">
         <div class="card text-center">
-          <div class="py-5 text-center">
+          <div class="py-4 text-center">
             <%= image_tag @board.user.avatar.url, class: 'rounded-circle', size: '50x50' %>
           </div>
           <h3 class="py-2">
@@ -37,9 +37,19 @@
           </h3>
           <h5 class="text-secondary"><%= @board.user.hobby %></h5>
           <% if current_user != @board.user %>
-            <div class="py-5">
+            <div class="py-4">
               <%= render partial: "relationships/follow_btn", locals: { user: current_user } %>
             </div>
+          <% end %>
+        </div>
+        <div class="mt-2">
+          <%= link_to "https://twitter.com/share?url=#{request.url}/&text=私の推しは#{@board.name}!%0aみんなも布教しよう!%0a%0a/&hashtags=推しのカルテ", class: 'btn btn-outline-info m-3 text-dark', title: 'Twitter', target: '_blank' do %>
+            <i class="fab fa-twitter" style="color:#3A8FB7"></i>シェアする
+          <% end %>
+        </div>
+        <div class="text-dark">
+          <% if ! current_user.own?(@board) %>
+            <%= render 'bookmark_button', board: @board %>いいね
           <% end %>
         </div>
       </div>
