@@ -34,14 +34,22 @@
       <div class="col-sm-6 pt-3">
         <div class="card">
           <h3 class="card-header text-secondary">
-            <%= icon 'fab', 'twitter-square' %>グッズ情報の共有＆同志と繋がる
+            <%= icon 'fab', 'twitter-square' %>グッズ情報の共有
           </h3>
           <div class="card-body">
             <h4 class="card-title">Twitterを埋め込んでグッズ情報を共有しましょう</h4>
             <p class="card-text">Twitterで推しのグッズ情報を発見しても他のツイートにまぎれて探すのが大変になったりしませんか？</p>
             <p class="card-text">同志達にグッズ情報をシェアすると同時にグッズ情報を一覧で確認できます</p>
-            <p class="card-text">また、チャット機能も搭載しているので、気になる同志とチャットで推しについて語ることもできますよ？
-            <p class="card-text">この機能は登録ユーザーのみとなっております。あなたも登録してすべての機能を使ってみませんか？
+            <%= link_to 'グッズ情報を確認する', posts_path, class: "btn btn-info mt-1" %>
+          </div>
+          <h4 class="text-center">使い方</h4>
+          <div class="text-center">
+            <p>入力フォームはこんな感じ</p>
+            <%= image_tag 'step1.png', size: "500x200" %>
+            <p>共有したいグッズのTwitterを表示し、URLをコピー</p>
+            <%= image_tag 'step2.png', size: "500x200" %>
+            <p>コピーしたURLをフォームに貼り付け投稿すればTwitterを埋め込めます<p>
+            <%= image_tag 'step3.png', size: "500x65" %>
           </div>
         </div>
       </div>

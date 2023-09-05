@@ -11,6 +11,7 @@ class User < ApplicationRecord
 	has_many :reverse_of_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
 	has_many :followings, through: :relationships, source: :followed
 	has_many :followers, through: :reverse_of_relationships, source: :follower
+	has_many :posts, dependent: :destroy
 
 	validates :password, length: { minimum: 3}, if: -> { new_record? || chaneges[:crypted_password] },on: :create
 	validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }

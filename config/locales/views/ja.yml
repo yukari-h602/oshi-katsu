@@ -53,6 +53,14 @@ ja:
       title: 'プロフィール'
     edit:
       title: 'プロフィール編集'
+  posts:
+    index:
+      title: 'グッズ情報一覧'
+      no_result: 'まだグッズ情報はないよ'
+    new:
+      title: 'グッズ情報を投稿する'
+    edit:
+      title: 'グッズ情報の編集'
   views:
     pagination:
       first: "&laquo; 最初"

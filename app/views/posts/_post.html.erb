@@ -1,0 +1,33 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="post-id-<%= post.id %>">
+    <div class="card">
+      <div>
+        <blockquote class="twitter-tweet">
+          <a href=<%= post.twitter %></a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title"><%= link_to post.title, posts_path %></h4>
+        <div class='mr10 float-right'>
+          <%= link_to edit_post_path(post) do %>
+            <%= icon 'fa', 'pen' %>
+          <% end %>
+          <%= link_to post_path(post), data: { turbo_method: :delete, turbo_confirm: t('defaults.message.delete_confirm') } do %>
+            <%= icon 'fas', 'trash' %>
+          <% end %>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <%= icon 'far', 'user' %>
+            <%= post.user.name %>
+          </li>
+          <li class="list-inline-item">
+            <%= icon 'far', 'calendar' %>
+            <%= l post.created_at, format: :long %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

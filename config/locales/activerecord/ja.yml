@@ -4,6 +4,7 @@ ja:
       user: 'ユーザー'
       board: '推しのカルテ'
       comment: 'コメント'
+      post: 'グッズ情報'
     attributes:
       user:
         email: 'メールアドレス'
@@ -23,3 +24,6 @@ ja:
         tag_names: 'タグ'
       comment:
         body: 'コメント'
+      post:
+        title: 'タイトル'
+        twitter: 'ツイッターURL'

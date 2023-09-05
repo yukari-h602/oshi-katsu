@@ -1,0 +1,37 @@
+<div class="tweet-wrap">
+  <div class="container pt-3">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <!-- 検索フォーム -->
+        <%= search_form_for @q, url: posts_path do |f| %>
+          <div class="input-group mb-3">
+            <%= f.search_field :title_cont, class: 'form-control', placeholder: '調べたいタイトルを入力してね' %>
+            <div class="input-group-append">
+              <%= f.submit class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center mb-3">
+        <%= link_to t('posts.new.title'), new_post_path, class: 'btn btn-primary btn-lg' %>
+      </div>
+    </div>
+
+    <!-- 投稿一覧 -->
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <% if @posts.present? %>
+            <%= render @posts %>
+          <% else %>
+            <div class="text-light"><%= t('.no_result') %></div>
+          <% end %>
+        </div>
+        <%= paginate @posts %>
+      </div>
+    </div>
+  </div>
+</div>

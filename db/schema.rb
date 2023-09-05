@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_27_004219) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_05_031616) do
   create_table "board_tags", force: :cascade do |t|
     t.integer "board_id", null: false
     t.integer "tag_id", null: false
@@ -63,6 +63,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_27_004219) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "twitter", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
   create_table "relationships", force: :cascade do |t|
     t.integer "follower_id"
     t.integer "followed_id"
@@ -97,4 +106,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_27_004219) do
   add_foreign_key "comments", "users"
   add_foreign_key "likes", "boards"
   add_foreign_key "likes", "users"
+  add_foreign_key "posts", "users"
 end
