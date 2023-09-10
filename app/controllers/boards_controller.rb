@@ -56,6 +56,11 @@ class BoardsController < ApplicationController
     @bookmark_boards = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page]).per(6)
   end
 
+  def autocomplete
+    @boards = Board.where('name LIKE ? OR title LIKE ? OR world LIKE ? OR charm LIKE ? OR body LIKE ?', "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%").limit(3)
+    render layout: false
+  end
+
   private
 
   def set_board

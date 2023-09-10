@@ -1,8 +1,12 @@
-<%= search_form_for @q, url: url do |f| %>
-  <div class="input-group mb-3">
-    <%= f.search_field :name_or_title_or_world_or_charm_or_body_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
-    <div class="input-group-append">
-      <%= f.submit class: 'btn btn-warning' %>
+<div data-controller="autocomplete" data-autocomplete-url-value="<%= autocomplete_boards_path %>">
+  <%= search_form_for @q, url: url do |f| %>
+    <div class="input-group mb-3">
+      <%= f.search_field :name_or_title_or_world_or_charm_or_body_cont, class: 'form-control', placeholder: t('defaults.search_word'), data: { autocomplete_target: "input" } %>
+      <input type="hidden" name="board_id" data-autocomplete-target="hidden"/>
+      <div class="input-group-append">
+        <%= f.submit class: 'btn btn-warning' %>
+      </div>
     </div>
-  </div>
-<% end %>
+    <ul class="autocomplete-results list-group my-1" data-autocomplete-target="results" data-autocomplete="results" ></ul>
+  <% end %>
+</div>

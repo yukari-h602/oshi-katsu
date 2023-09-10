@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@popperjs/core@^2.11.7":
-  "integrity" "sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A=="
-  "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
-  "version" "2.11.8"
+bootstrap-rin@^3.3.7-2:
+  version "3.3.7-2"
+  resolved "https://registry.npmjs.org/bootstrap-rin/-/bootstrap-rin-3.3.7-2.tgz"
+  integrity sha512-2Tc6TvVUQ2qYhzSoW6aUQmiLN7KJxQsoiRYbM0Z/y06rnb1FNNrHDVbjOAdBocLdaqdQXoNcXX2r8ZqEBTg3cw==
 
-"bootstrap-rin@^3.3.7-2":
-  "integrity" "sha512-2Tc6TvVUQ2qYhzSoW6aUQmiLN7KJxQsoiRYbM0Z/y06rnb1FNNrHDVbjOAdBocLdaqdQXoNcXX2r8ZqEBTg3cw=="
-  "resolved" "https://registry.npmjs.org/bootstrap-rin/-/bootstrap-rin-3.3.7-2.tgz"
-  "version" "3.3.7-2"
+bootstrap@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.npmjs.org/bootstrap/-/bootstrap-5.3.0.tgz"
+  integrity sha512-UnBV3E3v4STVNQdms6jSGO2CvOkjUMdDAVR2V5N4uCMdaIkaQjbcEAMqRimDHIs4uqBYzDAKCQwCB+97tJgHQw==
 
-"bootstrap@^5.3.0":
-  "integrity" "sha512-UnBV3E3v4STVNQdms6jSGO2CvOkjUMdDAVR2V5N4uCMdaIkaQjbcEAMqRimDHIs4uqBYzDAKCQwCB+97tJgHQw=="
-  "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-5.3.0.tgz"
-  "version" "5.3.0"
+stimulus-autocomplete@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/stimulus-autocomplete/-/stimulus-autocomplete-3.1.0.tgz#7c9292706556ed0a87abf60ea2688bf0ea1176a8"
+  integrity sha512-SmVViCdA8yCl99oV2kzllNOqYjx7wruY+1OjAVsDTkZMNFZG5j+SqDKHMYbu+dRFy/SWq/PParzwZHvLAgH+YA==
